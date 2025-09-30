@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>AIMLOCK RI PLUS</title>
+  <style>
+    body {
+      background: #000;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      animation: colorChange 2s infinite;
+    }
+
+    .feature {
+      margin: 15px auto;
+      padding: 15px 20px;
+      background: #111;
+      border-radius: 10px;
+      width: 300px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2em;
+      animation: colorChange 4s infinite alternate;
+    }
+
+    .status {
+      font-weight: bold;
+    }
+
+    @keyframes colorChange {
+      0% { color: red; }
+      25% { color: orange; }
+      50% { color: lime; }
+      75% { color: cyan; }
+      100% { color: magenta; }
+    }
+
+    button {
+      padding: 5px 10px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>AIMLOCK RI PLUS</h1>
+
+  <div class="feature">
+    🔫 AIMLOCK 
+    <span class="status" id="aimlock">OFF❌</span>
+    <button onclick="toggle('aimlock')">Bật/Tắt</button>
+  </div>
+
+  <div class="feature">
+    📱 BUFF MÀN
+    <span class="status" id="buffman">OFF❌</span>
+    <button onclick="toggle('buffman')">Bật/Tắt</button>
+  </div>
+
+  <div class="feature">
+    📱 NHẠY MÀN
+    <span class="status" id="nhayman">OFF❌</span>
+    <button onclick="toggle('nhayman')">Bật/Tắt</button>
+  </div>
+
+  <div class="feature">
+    🎯 SHOTBOT
+    <span class="status" id="shotbot">OFF❌</span>
+    <button onclick="toggle('shotbot')">Bật/Tắt</button>
+  </div>
+
+  <div class="feature">
+    🔰 LOCK CỔ
+    <span class="status" id="lockco">OFF❌</span>
+    <button onclick="toggle('lockco')">Bật/Tắt</button>
+  </div>
+
+  <div class="feature">
+    🌩️ NHẸ TÂM
+    <span class="status" id="nhetam">OFF❌</span>
+    <button onclick="toggle('nhetam')">Bật/Tắt</button>
+  </div>
+
+  <div class="feature">
+    ⚡ ANTIBAN 100%
+    <span class="status" id="antiban">OFF❌</span>
+    <button onclick="toggle('antiban')">Bật/Tắt</button>
+  </div>
+
+  <script>
+    function toggle(id) {
+      const el = document.getElementById(id);
+      if (el.textContent.includes("OFF")) {
+        el.textContent = "ON✅";
+        el.style.color = "lime";
+      } else {
+        el.textContent = "OFF❌";
+        el.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
